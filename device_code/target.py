@@ -63,9 +63,16 @@ class program:
                 name="submodule",
                 display_str="wheres the temperature?",
                 ).set_children([
-                    doover_ui_warning_indicator(
-                        name="temp",
-                        display_str="Temperature",
+                    doover_ui_variable(
+                        name="anyoneWatching",
+                        display_str="Did anybody see that?",
+                        var_type="bool",
+                        curr_val=anyone_watching,
+                        graphic="fireworks_gif",
+                    ),
+                    doover_ui_text_parameter(
+                        name="text_param",
+                        display_str="Text Parameter object",
                     )
                 ]),
             ),
