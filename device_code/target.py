@@ -12,9 +12,9 @@ from doover_ui_iface import (
     doover_ui_variable,
     # doover_ui_element,
     doover_ui_submodule,
-    # doover_ui_text_parameter,
-    # doover_ui_datetime_parameter,
-    # doover_ui_warning_indicator,
+    doover_ui_text_parameter,
+    doover_ui_datetime_parameter,
+    doover_ui_warning_indicator,
     # doover_ui_state_command,
     # doover_ui_float_parameter,
     # doover_ui_alert_stream,
@@ -61,13 +61,17 @@ class program:
             ),
             doover_ui_submodule(
                 name="submodule",
-                display_str="wheres the temperature?",).set_children([
-                    doover_ui_submodule(
+                display_str="wheres the temperature?",
+                children=[(
+                    doover_ui_warning_indicator(
                         name="temp",
                         display_str="Temperature",
-                    )
+                    )),
                 ]
-            )
+            ),
+            doover_ui_warning_indicator(
+                name="temp",
+                display_str="Temperature",)
         ])
 
         self.doover_iface.record_critical_value(
