@@ -72,7 +72,11 @@ class program:
             )
         )
 
-        new_submodule = doover_ui_submodule( ui_elems )
+        new_submodule = doover_ui_submodule( 
+            name="submodule",
+            display_str="TESTING THE SUBMODULE",
+            children = ui_elems 
+            )
 
         self.doover_iface.set_children([
             new_submodule,
