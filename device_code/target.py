@@ -59,14 +59,15 @@ class program:
                 curr_val=anyone_watching,
                 graphic="fireworks_gif",
             ),
-            doover_ui_submodule(
+            (doover_ui_submodule(
                 name="submodule",
                 display_str="wheres the temperature?",
-                children=[(
+                ).set_children([
                     doover_ui_warning_indicator(
                         name="temp",
                         display_str="Temperature",
-                    )),]
+                    )
+                ]),
             ),
             doover_ui_warning_indicator(
                 name="temp",
