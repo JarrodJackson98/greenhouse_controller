@@ -72,11 +72,10 @@ class program:
             )
         )
 
-        new_submodule = doover_ui_submodule(
+        new_submodule = doover_ui_submodule( ui_elems )
 
-        self.doover_iface.set_children( ui_elems )
-        
-        ,
+        self.doover_iface.set_children([
+            new_submodule,
             doover_ui_warning_indicator(
                 name="temp",
                 display_str="Temperature",),
