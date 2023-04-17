@@ -1,0 +1,12 @@
+{
+    "deployment_package_dir": "device_code/",
+    "file_deployments": {
+        "files": [
+            {
+                "name": "fireworks_gif",
+                "file_dir": "assets/fireworks.gif",
+                "mime_type": "image/gif"
+            }
+        ]
+    }
+}
