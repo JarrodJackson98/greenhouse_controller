@@ -78,7 +78,6 @@ class program:
             ).add_children(ui_elems)
 
         self.doover_iface.set_children([
-            new_submodule,
             doover_ui_warning_indicator(
                 name="temp",
                 display_str="Temperature",),
@@ -126,6 +125,7 @@ class program:
                         "showOnGraph" : True,
                     },],
             ), 
+            new_submodule,
         ])
 
         self.doover_iface.record_critical_value(
