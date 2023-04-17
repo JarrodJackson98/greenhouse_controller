@@ -47,6 +47,8 @@ class program:
     ## This function is called recursively as long as the program should run
     def main_loop(self):
 
+        temp = 25.0
+
         anyone_watching = self.doover_iface.is_being_observed()
 
         self.doover_iface.set_children([
@@ -59,7 +61,14 @@ class program:
             ),
             doover_ui_submodule(
                 name="submodule",
-                display_str="Submodule",)   
+                display_str="Submodule",
+                children=[
+                    doover_ui_variable(
+                        name="temp",
+                        display_str="Temperature",
+                        var_type="float",
+                        curr_val=temp,),
+                ])   
 
         ])
 
