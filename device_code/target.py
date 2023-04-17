@@ -47,7 +47,7 @@ class program:
     ## This function is called recursively as long as the program should run
     def main_loop(self):
 
-        #temp = 25.0
+        temp = 25.0
 
         anyone_watching = self.doover_iface.is_being_observed()
 
@@ -85,7 +85,37 @@ class program:
                 display_str="Float Parameter object",), 
             doover_ui_alert_stream(
                 name="alert_stream",
-                display_str="Alert Stream object",),   
+                display_str="Alert Stream object",), 
+            doover_ui_variable(
+                name="gauge_test",
+                display_str="Gauge Test",
+                var_type="float",
+                curr_val=temp,
+                dec_precision=1,
+                form="radialGauge"
+                ranges = [{
+                        "label" : "Cool",
+                        "min" : 0,
+                        "max" : 20,
+                        "colour" : 'green',
+                        "showOnGraph" : True,
+                    },
+                    {
+                        "label" : "Warm",
+                        "min" : 20,
+                        "max" : 30,
+                        "colour" : 'yellow',
+                        "showOnGraph" : True,
+                    },
+                    {
+                        "label" : "Hot",
+                        "min" : 30,
+                        "max" : 40,
+                        "colour" : 'red',
+                        "showOnGraph" : True,
+                    },],
+            ),
+
             
         ])
 
