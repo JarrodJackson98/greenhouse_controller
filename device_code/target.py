@@ -47,7 +47,12 @@ class program:
     ## This function is called recursively as long as the program should run
     def main_loop(self):
 
-        temp = 25.0
+        float_input = self.doover_iface.get_command("tree")
+
+        if float_input is None:
+            temp = 25.0
+        else:
+            temp = float_input
 
         anyone_watching = self.doover_iface.is_being_observed()
 
@@ -83,7 +88,7 @@ class program:
                 display_str="Temperature",),
             doover_ui_text_parameter(
                 name="text_param",
-                display_str="Text Parameter object",),
+                display_str="the happy variable",),
             doover_ui_datetime_parameter(
                 name="datetime_param",
                 display_str="Datetime Parameter object",),
@@ -91,7 +96,7 @@ class program:
                 name="state_command",
                 display_str="State Command object",),
             doover_ui_float_parameter(
-                name="float_param",
+                name="tree",
                 display_str="Float Parameter object",), 
             doover_ui_alert_stream(
                 name="alert_stream",
