@@ -11,7 +11,7 @@ import time
 from doover_ui_iface import (
     doover_ui_variable,
     # doover_ui_element,
-    # doover_ui_submodule,
+    doover_ui_submodule,
     # doover_ui_text_parameter,
     # doover_ui_datetime_parameter,
     # doover_ui_warning_indicator,
@@ -56,7 +56,11 @@ class program:
                 var_type="bool",
                 curr_val=anyone_watching,
                 graphic="fireworks_gif",
-            )
+            ),
+            doover_ui_submodule(
+                name="submodule",
+                display_str="Submodule",)   
+
         ])
 
         self.doover_iface.record_critical_value(
