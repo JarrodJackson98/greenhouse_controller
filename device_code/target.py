@@ -92,7 +92,7 @@ class program:
                 var_type="float",
                 curr_val=temp,
                 dec_precision=1,
-                form="radialGauge"
+                form="radialGauge",
                 ranges = [{
                         "label" : "Cool",
                         "min" : 0,
@@ -114,9 +114,7 @@ class program:
                         "colour" : 'red',
                         "showOnGraph" : True,
                     },],
-            ),
-
-            
+            ), 
         ])
 
         self.doover_iface.record_critical_value(
