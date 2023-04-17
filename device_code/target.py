@@ -61,14 +61,13 @@ class program:
             ),
             doover_ui_submodule(
                 name="submodule",
-                display_str="wheres the temperature?",
-                children=[
+                display_str="wheres the temperature?",).set_children([
                     doover_ui_submodule(
                         name="temp",
                         display_str="Temperature",
                     )
-                ])   
-
+                ]
+            )
         ])
 
         self.doover_iface.record_critical_value(
