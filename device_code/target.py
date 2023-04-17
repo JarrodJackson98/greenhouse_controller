@@ -52,7 +52,7 @@ class program:
         self.doover_iface.set_children([
             doover_ui_variable(
                 name="anyoneWatching",
-                display_str="Did anybody see that?",
+                display_str="Did anybody see that? Not sure i did",
                 var_type="bool",
                 curr_val=anyone_watching,
                 graphic="fireworks_gif",
