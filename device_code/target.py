@@ -15,10 +15,10 @@ from doover_ui_iface import (
     doover_ui_text_parameter,
     doover_ui_datetime_parameter,
     doover_ui_warning_indicator,
-    # doover_ui_state_command,
-    # doover_ui_float_parameter,
-    # doover_ui_alert_stream,
-    # doover_ui_multiplot,
+    doover_ui_state_command,
+    doover_ui_float_parameter,
+    doover_ui_alert_stream,
+    doover_ui_multiplot,
 )
 
 
@@ -66,12 +66,27 @@ class program:
                     doover_ui_warning_indicator(
                         name="temp",
                         display_str="Temperature",
-                    )),
-                ]
+                    )),]
             ),
             doover_ui_warning_indicator(
                 name="temp",
-                display_str="Temperature",)
+                display_str="Temperature",),
+            doover_ui_text_parameter(
+                name="text_param",
+                display_str="Text Parameter object",),
+            doover_ui_datetime_parameter(
+                name="datetime_param",
+                display_str="Datetime Parameter object",),
+            doover_ui_state_command(
+                name="state_command",
+                display_str="State Command object",),
+            doover_ui_float_parameter(
+                name="float_param",
+                display_str="Float Parameter object",), 
+            doover_ui_alert_stream(
+                name="alert_stream",
+                display_str="Alert Stream object",),   
+            
         ])
 
         self.doover_iface.record_critical_value(
@@ -79,9 +94,9 @@ class program:
             value=anyone_watching
         )
         
-        self.doover_iface.set_display_str( "Hello World" )
+        self.doover_iface.set_display_str( "Testing UI" )
 
-        self.doover_iface.set_display_str( "Hello World" )
+        
 
         self.doover_iface.handle_comms()
 
