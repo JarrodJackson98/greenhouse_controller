@@ -51,31 +51,32 @@ class program:
 
         anyone_watching = self.doover_iface.is_being_observed()
 
-        self.doover_iface.set_children([
-            doover_ui_variable(
+        ui_elems = []
+
+        ui_elems.append(
+             doover_ui_variable(
                 name="anyoneWatching",
                 display_str="Did anybody see that?",
                 var_type="bool",
                 curr_val=anyone_watching,
                 graphic="fireworks_gif",
-            ),
-            (doover_ui_submodule(
-                name="submodule",
-                display_str="wheres the temperature?",
-                ).set_children([
-                    doover_ui_variable(
-                        name="anyoneWatching",
-                        display_str="Did anybody see that?",
-                        var_type="bool",
-                        curr_val=anyone_watching,
-                        graphic="fireworks_gif",
-                    ),
-                    doover_ui_text_parameter(
-                        name="text_param",
-                        display_str="Text Parameter object",
-                    )
-                ]),
-            ),
+            )
+        )
+        ui_elems.append(
+             doover_ui_variable(
+                name="anyoneWatching",
+                display_str="Did anybody see that?",
+                var_type="bool",
+                curr_val=anyone_watching,
+                graphic="fireworks_gif",
+            )
+        )
+
+        new_submodule = doover_ui_submodule(
+
+        self.doover_iface.set_children( ui_elems )
+        
+        ,
             doover_ui_warning_indicator(
                 name="temp",
                 display_str="Temperature",),
