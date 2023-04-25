@@ -7,3 +7,17 @@
 You can use this repository directly in Doover to launch linux devices, or fork this and use it as a base for your own custom applications.
 
 For more information about Doover - go to Doover.com
+
+Proposed doover_config.json
+ "js_components" : [
+     {
+         "name": "widget2",
+         "js_entry": "js/Widget_2.js",
+         "expose": "Widget"
+     },
+     {
+         "name": "widget3",
+         "js_entry": "js/Widget_3/index.js",
+         "expose": "Widget"
+     }
+ ]

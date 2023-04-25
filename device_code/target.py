@@ -10,7 +10,7 @@ import time
 
 from doover_ui_iface import (
     doover_ui_variable,
-    # doover_ui_element,
+    doover_ui_element,
     doover_ui_submodule,
     doover_ui_text_parameter,
     doover_ui_datetime_parameter,
@@ -74,6 +74,13 @@ class program:
                 var_type="bool",
                 curr_val=anyone_watching,
                 graphic="fireworks_gif",
+            )
+        )
+        ui_elems.append(
+            doover_ui_element(
+            name="TestRemoteComponent",
+            display_str="Test Remote Component",
+            component_url="https://127.0.0.1:3004"
             )
         )
 

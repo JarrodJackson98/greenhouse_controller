@@ -6,7 +6,25 @@
                 "name": "fireworks_gif",
                 "file_dir": "assets/fireworks.gif",
                 "mime_type": "image/gif"
+            },
+            {
+                "name": "widget4",
+                "file_dir": "assets/widget4.js",
+                "mime_type": "text/js"
             }
         ]
-    }
+    },
+    "js_components" : [
+        {
+            "name": "widget2",
+            "js_entry": "js/Widget_2.js",
+            "expose": "Widget"
+        },
+        {
+            "name": "widget3",
+            "js_entry": "js/Widget_3/index.js",
+            "expose": "Widget"
+        }
+    ]
 }
+

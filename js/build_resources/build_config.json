@@ -1,0 +1,19 @@
+{
+"js_components" : [
+    {
+        "name": "widget2",
+        "js_entry": "/Widget_2.js",
+        "expose": "Widget"
+    },
+    {
+        "name": "widget3",
+        "js_entry": "/Widget_3/index.js",
+        "expose": "Widget"
+    },
+    {
+        "name": "widget4",
+        "js_entry": "/Widget_4/widjet.js",
+        "expose": "Widget"
+    }
+]
+}
